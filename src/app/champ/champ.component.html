@@ -1,0 +1,35 @@
+<p>champ works!</p>
+<form>
+  <div class="mb-3 row">
+    <label for="table-filtering-search" class="col-xs-3 col-sm-auto col-form-label">Full text search:</label>
+    <div class="col-xs-3 col-sm-auto">
+      <input id="table-filtering-search" class="form-control" type="text" >
+    </div>
+  </div>
+</form>
+<table class="table table-striped">
+  <thead>
+    <th scope="col">#</th>
+    <th scope="col">Name</th>
+    <th scope="col">Dame</th>
+    <th scope="col">Defend</th>
+    <th scope="col">speed</th>
+    <th scope="col">price</th>
+    <th scope="col">avatar</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let champ of Champs; index as i">
+      <td scope="row">{{i + 1}}</td>
+      <td>{{champ.name}}</td>
+      <td>
+        <app-dame [dame]="champ.dame"></app-dame>
+      </td>
+      <td>{{champ.defend}}</td>
+      <td>{{champ.speed}}</td>
+      <td>{{champ.price}}</td>
+      <td>
+        <app-table-avatar [price]="champ.price" avatar="{{champ.avatar}}"></app-table-avatar>
+      </td>
+    </tr>
+  </tbody>
+</table>
