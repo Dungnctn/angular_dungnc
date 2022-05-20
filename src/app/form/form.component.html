@@ -1,18 +1,53 @@
 <p>{{userForm.valid | json}}</p>
-<form action="" #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+<form action="" #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+  <input type="hidden"[(ngModel)]="inputValue.id" >
   <div class="form-group">
     <label for="">Username</label>
-    <input type="text" name="username" #username="ngModel" ngModel class="form-control" required minlength="10" maxlength="32">
+    <input type="text" name="username" #username="ngModel" [(ngModel)]="inputValue.username" class="form-control" required minlength="3" maxlength="32">
     <span>{{username.errors | json}}</span>
     <app-app-show-validate [field]="username" key="username"></app-app-show-validate>
   </div>
   <div class="form-group">
     <label for="">Age</label>
-    <input type="number" name="age" #age="ngModel" ngModel class="form-control" required min="1" max="100">
+    <input type="number" name="age" #age="ngModel" [(ngModel)]="inputValue.age" class="form-control" required min="1" max="100">
     <span>{{age.errors  | json}}</span>
     <app-app-show-validate [field]="age" key="age"></app-app-show-validate>
+  </div>
+  <div class="form-group">
+    <label for="">Email</label>
+    <input type="email" name="email" #email="ngModel" [(ngModel)]="inputValue.email" class="form-control" required >
+    <span>{{email.errors  | json}}</span>
+    <app-app-show-validate [field]="email" key="email"></app-app-show-validate>
+  </div>
+  <div class="form-group">
+    <label for="">SDT</label>
+    <input type="number" name="phone" #phone="ngModel" [(ngModel)]="inputValue.phone" class="form-control" required minlength="3" maxlength="10" >
+    <span>{{phone.errors  | json}}</span>
+    <app-app-show-validate [field]="phone" key="phone"></app-app-show-validate>
   </div>
   <div>
     <button [disabled] = "!userForm.valid" class="btn btn-success">Submit</button>
   </div>
 </form>
+<div>
+  <table class="table table-hover">
+    <thead>
+      <th>ID</th>
+      <th>Tên</th>
+      <th>Tuổi</th>
+      <th>Email</th>
+      <th>SDT</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of users">
+        <td>{{item.id}}</td>
+        <td>{{item.username}}</td>
+        <td>{{item.age}}</td>
+        <td>{{item.email}}</td>
+        <td>{{item.phone}}</td>
+        <td><button (click)="updateItem(item)">SỬa</button></td>
+        <td><button (click)="removeItem(item.id)">Xóa</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
