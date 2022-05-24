@@ -10,6 +10,9 @@ import { TableAvatarComponent } from './table/table-avatar/table-avatar.componen
 import { DameComponent } from './table/dame/dame.component';
 import { FormComponent } from './form/form.component';
 import { AppShowValidateComponent } from './component/app-show-validate/app-show-validate.component';
+import { UserFormComponent } from './user/user-form/user-form.component';
+import { UserListComponent } from './user/user-list/user-list.component';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +22,9 @@ import { AppShowValidateComponent } from './component/app-show-validate/app-show
     DameComponent,
     FormComponent,
     AppShowValidateComponent,
+    UserFormComponent,
+    UserListComponent,
+    UserComponent,
   ],
   imports: [
     BrowserModule,

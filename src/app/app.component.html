@@ -10,10 +10,11 @@
 <div class="container">
   <div>
     <span>Angular form</span>
-    <app-form></app-form>
+    <app-user></app-user>
+    <!-- <app-form></app-form> -->
   </div>
   <h1>champions</h1>
-  <div>
+  <!-- <div>
     <label for="input">Event Input</label>
     <input type="text" id="input" (input)="onInput($event)"> <br>
     <form >
@@ -31,8 +32,9 @@
       <input type="text" id=""  [value]="inputValue.avatar" (input)="onInputvalue($event, 'avatar')"> <br>
     </form>
       <button (click)="InputObject()">Save</button>
-  </div>
+  </div> -->
   <button (click)="btnOnclick()">{{showStatus ? "Ẩn" : "Hiện" }}</button>
+
   <app-champ [champions]="Champs" *ngIf="showStatus"></app-champ>
 
 </div>
