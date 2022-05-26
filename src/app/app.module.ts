@@ -13,6 +13,8 @@ import { AppShowValidateComponent } from './component/app-show-validate/app-show
 import { UserFormComponent } from './user/user-form/user-form.component';
 import { UserListComponent } from './user/user-list/user-list.component';
 import { UserComponent } from './user/user.component';
+import { ClientLayoutComponent } from './layout/client-layout/client-layout.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { UserComponent } from './user/user.component';
     UserFormComponent,
     UserListComponent,
     UserComponent,
+    ClientLayoutComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

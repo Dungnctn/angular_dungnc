@@ -1,50 +1,13 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
 <div class="container">
-  <div>
-    <span>Angular form</span>
-    <app-user></app-user>
-    <!-- <app-form></app-form> -->
-  </div>
-  <h1>champions</h1>
-  <!-- <div>
-    <label for="input">Event Input</label>
-    <input type="text" id="input" (input)="onInput($event)"> <br>
-    <form >
-      <label for="">Name</label>
-      <input type="text" id=""  [value]="inputValue.name"  (input)="onInputvalue($event, 'name')"> <br>
-      <label for="">dame</label>
-      <input type="text" id=""  [value]="inputValue.dame"  (input)="onInputvalue($event, 'dame')"> <br>
-      <label for="">defend</label>
-      <input type="text" id=""  [value]="inputValue.defend" (input)="onInputvalue($event, 'defend')"> <br>
-      <label for="">speed</label>
-      <input type="text" id=""  [value]="inputValue.speed" (input)="onInputvalue($event, 'speed')"> <br>
-      <label for="">price</label>
-      <input type="text" id=""  [value]="inputValue.price" (input)="onInputvalue($event, 'price')"> <br>
-      <label for="">Avatar</label>
-      <input type="text" id=""  [value]="inputValue.avatar" (input)="onInputvalue($event, 'avatar')"> <br>
-    </form>
-      <button (click)="InputObject()">Save</button>
-  </div> -->
-  <button (click)="btnOnclick()">{{showStatus ? "Ẩn" : "Hiện" }}</button>
+  <h2>Angular Router</h2>
 
-  <app-champ [champions]="Champs" *ngIf="showStatus"></app-champ>
+  <nav>
+    <ul>
+      <li><a routerLink="/">Home</a></li>
+      <li><a routerLink="/user">User</a></li>
+    </ul>
+  </nav>
+
+  <router-outlet></router-outlet>
 
 </div>
-
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-<router-outlet></router-outlet>
