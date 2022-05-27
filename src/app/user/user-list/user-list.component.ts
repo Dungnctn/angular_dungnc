@@ -7,8 +7,8 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class UserListComponent implements OnInit {
   @Input() users: any
-  @Output() handleDelete: EventEmitter<number>
-  @Output() handleEdit: EventEmitter<number>
+  @Output() handleDelete: EventEmitter<any>
+  @Output() handleEdit: EventEmitter<any>
   constructor() {
     this.handleDelete = new EventEmitter();
     this.handleEdit = new EventEmitter();
@@ -17,11 +17,11 @@ export class UserListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onEdit(userId: number) {
+  onEdit(userId: any) {
     this.handleEdit.emit(userId)
   }
 
-  onDelete(userId: number) {
+  onDelete(userId: any) {
     this.handleDelete.emit(userId)
   }
 

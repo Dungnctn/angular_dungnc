@@ -15,6 +15,8 @@ import { UserListComponent } from './user/user-list/user-list.component';
 import { UserComponent } from './user/user.component';
 import { ClientLayoutComponent } from './layout/client-layout/client-layout.component';
 import { HomeComponent } from './home/home.component';
+import { HeaderComponent } from './component/header/header.component';
+import { FooterComponent } from './component/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { HomeComponent } from './home/home.component';
     UserComponent,
     ClientLayoutComponent,
     HomeComponent,
+    HeaderComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
